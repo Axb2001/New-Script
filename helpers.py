@@ -241,19 +241,19 @@ def print_multioffers(sheet,year, wave):
     if wave == 1:
         multioffers = multioffers[multioffers.pot>= 60]
     multioffers.sort_values('player')
-    multioffers['El g'] = ""
-    multioffers['lam'] = ""
-    multioffers['cubz'] = ""
-    multioffers['sciipi'] = ""
-    multioffers['fingal'] = ""
-    multioffers['ryan'] = ""
+    multioffers['Omni'] = ""
+    multioffers['Buck'] = ""
+    multioffers['Dark'] = ""
+    multioffers['Saber'] = ""
+    multioffers['Ricky'] = ""
+    multioffers['Gwell'] = ""
     multioffers['winner'] = ""
-    multioffers['father'] = ""
+    multioffers['JDC'] = ""
     #, , multioffers['brian'], multioffers['spartan'], multioffers['lam']
     #,'jackets','brian','spartan','lam'
     print('Saving multioffers table... ')
     #print(multioffers[multioffers.ovr <=60])
-    multioffers[['El g','fingal','ryan','cubz','sciipi','father','lam','winner','team','player','ratings','traits','salary','years','pitch']].sort_values('player').to_csv('multioffers.csv',index=False)
+    multioffers[['Omni','Ricky','Gwell','Dark','Saber','JDC','Buck','winner','team','player','ratings','traits','salary','years','pitch']].sort_values('player').to_csv('multioffers.csv',index=False)
 
 def sign_singleoffers(data,sheet,year,phase, wave):
     singleoffers = sheet.drop_duplicates(['player'],keep=False)
